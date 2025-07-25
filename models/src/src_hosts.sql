@@ -2,7 +2,7 @@ WITH raw_hosts AS (
     SELECT
         *
     FROM
-       AIRRNB.RAW.RAW_HOSTS
+      {{ source('airrnb','hosts') }}
 )
 SELECT
     id AS host_id,
