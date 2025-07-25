@@ -2,7 +2,7 @@ WITH raw_reviews AS (
     SELECT
         *
     FROM
-        AIRRNB.RAW.RAW_REVIEWS
+         {{ source('airrnb','reviews') }}
 )
 SELECT
     listing_id,
